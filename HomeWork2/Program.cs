@@ -13,4 +13,25 @@ int resultat = SecondNumber(YourNumber);
 Console.WriteLine($"Вы ввели число {YourNumber} , вторая цифра вашего числа {resultat} ");
 */
 
-/*
+/*Задача 13: Напишите программу, которая выводит 
+третью цифру заданного числа или сообщает, что третьей цифры нет*/
+
+int ThreeNumber( int number){
+    while( number > 999){
+        number = number /10;
+    }
+    number = number %10;
+return number;
+}
+Console.WriteLine("Введите ваше любимое число  ");
+int YourLoveNumber = Convert.ToInt32(Console.ReadLine());
+int res;
+if(YourLoveNumber <= 99){
+    Console.WriteLine($"ОЙ -ОЙ у вашего любимого числа {YourLoveNumber} нет третьей цифры ");
+}
+    else{
+        res = ThreeNumber(YourLoveNumber);
+        Console.WriteLine($"Ваше люимое число  {YourLoveNumber} третья цифра этого числа {res} ");
+    }
+
+ 
