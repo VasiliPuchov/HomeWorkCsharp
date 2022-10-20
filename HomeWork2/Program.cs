@@ -57,7 +57,7 @@ Console.WriteLine(day);
 /* Домашнее задание номер 3
 Задача 19
 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом*/
-
+/*
 bool Palindrome(string number){
     if(number[0] == number[4] && number[1] == number[3]){
         return true;
@@ -70,4 +70,33 @@ Console.WriteLine("Введите пятизначное число ");
 string  num = Console.ReadLine();
 bool res = Palindrome(num);
 Console.WriteLine(res);
+*/
+/*Задача 21
+Напишите программу, которая
+ принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.*/
+/*
+ double ABC( double x1, double x2, double y1, double y2, double z1, double z2){
+    double x = x2*x2 - x1 * x1;
+    double y = y2 * y2 - y1 * y1;
+    double z = z2 * z2 - z1 * z1;
+    double distaion = x + y + z;
+    distaion = Math.Sqrt(distaion);
+    return distaion;
+ }
+ Console.WriteLine("Введите координаты первой точки по оси X");
+ double x = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Введите координаты первой точки по оси Y");
+ double y = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Введите координаты первой точки по оси Z");
+ double z = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Введите координаты второй точки по оси X");
+ double x1 = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Введите координаты второй точки по оси Y");
+ double y1 = Convert.ToInt32(Console.ReadLine());
+  Console.WriteLine("Введите координаты второй точки по оси Z");
+ double z1 = Convert.ToInt32(Console.ReadLine());
+ double resultat = ABC(x, y, z, x1, y1, z1);
+ Console.WriteLine($"Растояние между двумя точками , всегда прямая :) , а  растояние между вашими точками {resultat} ");
+*/
 
+/*
