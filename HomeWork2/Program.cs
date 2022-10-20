@@ -99,4 +99,15 @@ Console.WriteLine(res);
  Console.WriteLine($"Растояние между двумя точками , всегда прямая :) , а  растояние между вашими точками {resultat} ");
 */
 
-/*
+/*Задача 23
+Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.*/
+void Cub(int N){
+    int index = 1;
+    while(index <= N){
+        Console.Write(Math.Pow(index,3) + " ");
+        index++;
+    }
+}
+Console.WriteLine("Введите число ");
+int res = Convert.ToInt32(Console.ReadLine());
+Cub(res);
