@@ -69,3 +69,46 @@ Console.WriteLine($"Сумма элементов массива состоящ�
 /*
 Задача 38: Задайте массив вещественных чисел. 
 Найдите разницу между максимальным и минимальным элементов массива.*/
+
+
+double[] Massiv3( int size, double min, double max){
+    double[] array = new double[size];
+    for( int i = 0; i < size; i++){
+        array[i]  = new Random().NextDouble() *(max - min) + min;
+    }
+    return array;
+}
+void ShowArray2( double[] array){
+    for( int i = 0; i < array.Length; i++){
+        Console.Write(array[i] + " ");
+    }
+}
+double Resultat( double[] array){
+    
+        double Max = array[0];
+        double Min = array[0];
+         double itog = 0;
+        for( int i = 0; i < array.Length; i++){
+            if(array[i] > Max){
+                 Max = array[i];
+            }
+        
+            if( array[i] < Min){
+                Min = array[i];
+            }
+        }
+        itog = Max - Min;
+        return itog;
+}
+Console.WriteLine("Введите размер массива");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное значение ");
+double min = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите максимальное значение");
+double max = Convert.ToDouble(Console.ReadLine());
+double[] MyArray = Massiv3(n, min, max);
+ShowArray2(MyArray);
+double Res  = Resultat(MyArray);
+Console.WriteLine();
+Console.WriteLine($"Разница максимального и минимального  элементов массива состоящих из {n} элементов  равна {Res}  ");
+Console.WriteLine(Resultat(MyArray));
